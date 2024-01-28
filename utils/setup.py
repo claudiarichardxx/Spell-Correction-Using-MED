@@ -3,6 +3,7 @@ import urllib
 import nltk
 from nltk.corpus import wordnet as wn
 nltk.download('wordnet')
+import sys
 from collections import Counter
 
 class SetupFunctions:
@@ -35,7 +36,7 @@ class SetupFunctions:
 
             return dictionary, count
       
-      def findStarters(words, misspellings, pos):
+      def findStarters(self, words, misspellings, pos):
 
             for i in misspellings:
                   target = words[0]
@@ -44,6 +45,7 @@ class SetupFunctions:
                         pos[present] = []
                         #count = count + 1
                   pos[present].append(target)
+                  
             return len(misspellings)
       
       def findPossibleFirstLetters(self, df):
