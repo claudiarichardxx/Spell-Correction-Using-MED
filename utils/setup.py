@@ -2,7 +2,7 @@ import pandas as pd
 import urllib
 import nltk
 from nltk.corpus import wordnet as wn
-nltk.download('wordnet')
+#nltk.download('wordnet')
 import sys
 from collections import Counter
 
