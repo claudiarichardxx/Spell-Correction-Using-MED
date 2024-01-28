@@ -2,7 +2,7 @@ import nltk
 import pandas as pd
 from run import SpellCheck
 from pandarallel import pandarallel
-
+nltk.download('wordnet')
 
 
 if __name__ == "__main__":
