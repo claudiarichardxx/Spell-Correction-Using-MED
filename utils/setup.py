@@ -4,6 +4,7 @@ import nltk
 from nltk.corpus import wordnet as wn
 nltk.download('wordnet')
 import sys
+from Collections import Counter
 
 def createData(link, filename = "data\\data.dat"):
 
@@ -63,3 +64,21 @@ def buildDictionary():
         dictionary[i] = sorted(dictionary[i], key=len)
 
   return dictionary, count
+
+def findStarters(words, misspellings, pos):
+  for i in misspellings:
+      target = words[0]
+      present = i[0]
+      if (present not in pos.keys()):
+          pos[present] = []
+          #count = count + 1
+      pos[present].append(target)
+  return len(misspellings)
+
+def findPossibleFirstLetters(df):
+  pos = {}
+  df['num_of_words'] = df.apply(lambda x: findStarters(x.words, x.misspellings, pos), axis = 1)
+  for i in pos.keys():
+    ll = Counter(pos[i])
+    pos[i] = sorted(ll, key = ll.get, reverse = True)
+  return df, pos
