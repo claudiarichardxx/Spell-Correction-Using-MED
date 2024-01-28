@@ -39,7 +39,7 @@ class DistanceTools:
     #print('k value is: ', len(temp))
     return len(temp)
 
-  def levenshtein_distance_gen(str1, str2):
+  def levenshtein_distance_gen(self, str1, str2):
 
       counter = {"+": 0, "-": 0}
       for edit_code, *_ in ndiff(str1, str2):

@@ -45,7 +45,7 @@ class SetupFunctions:
                         pos[present] = []
                         #count = count + 1
                   pos[present].append(target)
-                  
+
             return len(misspellings)
       
       def findPossibleFirstLetters(self, df):
