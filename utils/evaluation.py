@@ -1,8 +1,6 @@
 from collections import Counter
 
-class Evaluation:
-
-  def getResults(self, df):
+def getResults(self, df):
 
     k_values = []
     for row in df['k_list']:
@@ -14,7 +12,7 @@ class Evaluation:
     return results
 
 
-  def getAverageSuccessValues(self, results, total, k_vals):
+def getAverageSuccessValues(self, results, total, k_vals):
 
     success_at_k = {}
     for i in range(0, len(k_vals)):
