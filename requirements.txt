@@ -2,5 +2,3 @@ nltk
 pandas
 numpy
 pandarallel
-difflib
-collections

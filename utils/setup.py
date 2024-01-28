@@ -3,15 +3,18 @@ import urllib
 import nltk
 from nltk.corpus import wordnet as wn
 nltk.download('wordnet')
+import sys
 
-def createData(link, filename = "data.dat"):
+def createData(link, filename = "data\\data.dat"):
 
-  urllib.request.urlretrieve(link, "data.dat")
+  urllib.request.urlretrieve(link, filename)
   current_key = None
   result_dict = {}
   repeats = []
   print('About the spellcheck dataset:\n')
-  for line in open(filename).readlines():
+  data_file = open(filename, 'r')
+  print(filename)
+  for line in data_file.readlines():
 
       lines = line.strip().split('\n')
 
