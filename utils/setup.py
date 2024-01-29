@@ -12,7 +12,9 @@ class SetupFunctions:
             return len(lst)
 
       def describeData(self, df, repeats, word_count):
-            
+            print('About the dataset:\n')
+            print('The following words are repeats: ')
+            print(repeats)
             df['num_of_words'] = df['misspellings'].apply(self.countWords)
             print('\nThere are a total of', len(df), 'unique correct words and', len(repeats) , 'repeats which totals to', len(df) + len(repeats),'words')
             print('There are a total of', df.num_of_words.sum(), 'misspelt words in the dataset')

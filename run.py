@@ -14,7 +14,7 @@ class SpellCheck:
         current_key = None
         result_dict = {}
         repeats = []
-        print('About the spellcheck dataset:\n')
+        #print('About the spellcheck dataset:\n')
         for line in open(filename).readlines():
 
             lines = line.strip().split('\n')
@@ -24,7 +24,7 @@ class SpellCheck:
                     if(current_key not in result_dict.keys()):
                         result_dict[current_key] = []
                     else:
-                        print('The word "' + current_key + '" occurs more than once')
+                        #print('The word "' + current_key + '" occurs more than once')
                         repeats.append(current_key)
                         #result_dict[current_key].append(lines[0].lower())
                     #print(line[1:-2])
