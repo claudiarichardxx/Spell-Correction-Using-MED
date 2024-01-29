@@ -1,3 +1,4 @@
+#Importing necessary libraries from utils 
 from utils.tools import DistanceTools
 from utils.setup import SetupFunctions
 from utils.evaluation import Evaluation
@@ -9,7 +10,7 @@ pd.options.mode.chained_assignment = None
 class SpellCheck:
 
     def createData(self, link, filename = "./data//data.dat"):
-
+        #Function to download the data from the link and create pandas dataframe
         urllib.request.urlretrieve(link, filename)
         current_key = None
         result_dict = {}
@@ -42,6 +43,7 @@ class SpellCheck:
                           k_vals = [1,5,10], 
                           link =  "https://www.dcs.bbk.ac.uk/~roger/missp.dat"):
 
+        #Function to find the closest words from the given list for the misspelled word
         tools = DistanceTools()
         setup = SetupFunctions()
         evals = Evaluation()
