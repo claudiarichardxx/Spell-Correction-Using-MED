@@ -17,6 +17,18 @@ Arguments:
 4. link        : default = links['birkbeck'] ; available: links['aspell'], links['wikipedia']
 5. df          : Optional, you can pass a pandas dataframe with columns 'words' and '' 
 
+# To reproduce the results on Birkbeck:
+
+The program was run on multiple systems and the results were stored as json files. They are available in resuls\parts. We import the result files in the example run(examples\spellCheckUsingMED.ipynb) to show the calculation of the s@k metric.
+
+# Folders:
+
+1. Example run can be found in examples\
+2. Functions used are in utils\ and run.py
+3. main.py is the file you should be running, change the parameters
+4. data\ is where the data is stored
+5. results\birkbeckResults has results from our run 
+
 # Optimizations:
 To optimize the time complexity of the algorithm, we implemented the following:
 
