@@ -3,7 +3,7 @@ from difflib import ndiff
 class DistanceTools:
   
   def findTarget(self, target, word, dictionary, starters):
-
+    #Function to check for the enarest words from the collection of words using Levenshtein distance
     max_length = len(target) + 10
     max_k = sum(self.levenshtein_distance_gen(target, word))
 
@@ -40,7 +40,7 @@ class DistanceTools:
     return len(temp)
 
   def levenshtein_distance_gen(self, str1, str2):
-
+      #Function to calculate Levenshtein distance bewtween 2 words 
       counter = {"+": 0, "-": 0}
       for edit_code, *_ in ndiff(str1, str2):
           if edit_code == " ":
