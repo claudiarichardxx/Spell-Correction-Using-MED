@@ -1,3 +1,4 @@
+#This module initialises the data structure and metadata information required to run the algorithm
 import pandas as pd
 import urllib
 import nltk
@@ -7,11 +8,13 @@ import sys
 from collections import Counter
 
 class SetupFunctions:
-
+      
       def countWords(self, lst):
+            #Function to get the number of words
             return len(lst)
 
       def describeData(self, df, repeats, word_count):
+            #Function to describe the stats of the data
             print('About the dataset:\n')
             print('The following words are repeats: ')
             print(repeats)
@@ -22,7 +25,7 @@ class SetupFunctions:
             print('There are', word_count,'words in the wordnet dictionary\n')
 
       def buildDictionary(self):
-            
+            #Function to dictionary data structure from the wordnet library
             dictionary = {}
             count = 0
             for word in wn.words(lang='eng'):
@@ -39,7 +42,7 @@ class SetupFunctions:
             return dictionary, count
       
       def findStarters(self, words, misspellings, pos):
-
+            #Function to make a list of the correct starting letter for each incorrect start to narrow down the search
             for i in misspellings:
                   target = words[0]
                   present = i[0]
@@ -51,6 +54,7 @@ class SetupFunctions:
             return len(misspellings)
       
       def findPossibleFirstLetters(self, df):
+            #Function to match and find the first letters from the wordnet 
             pos = {}
             df['num_of_words'] = df.apply(lambda x: self.findStarters(x.words, x.misspellings, pos), axis = 1)
             for i in pos.keys():
