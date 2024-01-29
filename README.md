@@ -1,8 +1,11 @@
-# Spell-Correction-Using-MED
+## Spell-Correction-Using-MED
 A system to evaluate the Minimum Edit Distance(MED) algorithm for spelling correction on spellcheck datasets from https://www.dcs.bbk.ac.uk/~roger/corpora.html (birkbeck, aspell and wikipedia).
 
 # To setup the environment:
-To  install the required libraries, run: pip install requirements.txt
+To  install the required libraries, run this:
+```
+pip install -r requirements.txt
+```
 
 # How to run:
 To replicate our results on the birkbeck dataset or to test the program for aspell or wikipedia datasets, you can use the main.py file. 
