@@ -21,7 +21,7 @@ Arguments to 'findingClosestWords':
 
 # To reproduce the results on Birkbeck:
 
-The program was run on multiple systems and the results were stored as json files. They are available in resuls\parts. We import the result files in the example run(examples\spellCheckUsingMED.ipynb) to show the calculation of the s@k metric.
+The program was run on multiple systems and the results were stored as json files. They are available in results\parts. We import the result files in the example run(examples\spellCheckUsingMED.ipynb) to show the calculation of the s@k metric.
 
 # Folders:
 
