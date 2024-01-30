@@ -35,14 +35,14 @@ The program was run on multiple systems and the results were stored as json file
 To optimize the time complexity of the algorithm, we implemented the following:
 
 1. All words with the same MED were given the same rank
-2. The MED between the correct and misspelled token is the maximum possible rank. Therefore, the search exits when all the positions before the maximum possible rank are taken. For example: Maximum rank is 3. If we find words in the dictionary with MED 2 and 1, the search exits, even if all the words haven't been checked.
+2. The MED between the correct and misspelled token is the maximum possible rank. Therefore, the search exits when all the positions before the maximum possible rank are taken. For example: Maximum rank is 3. If we find words in the dictionary with MED 2 and 1, the search exits, even if all the words haven't been checked
 3. A list of possible starting letters for every start letter in the misspelled words is obtained to narrow down the search.
 4. The words in wordnet are stored as a dictionary (hashmap) with the starting letter as the key
 5. The python package 'pandarallel' is utilized for parallel processing
 
 
 # Evaluation Metric:
-s@k : This denotes the rank of the correct word among other matches in the dictionary
+s@k : This denotes the rank of the correct word among other matches in the dictionary. The main check is to find if the correct word is within rank k
 
 
 
