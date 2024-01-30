@@ -17,7 +17,7 @@ Arguments to 'findingClosestWords':
 2. end_index   : default = 5, 
 3. k_vals      : default = [1,5,10]
 4. link        : default = links['birkbeck'] ; available: links['aspell'], links['wikipedia']
-5. df          : Optional, you can pass a pandas dataframe with columns 'words' and '' 
+5. df          : Optional, you can pass a pandas dataframe with columns 'words' and 'misspellings' 
 
 # To reproduce the results on Birkbeck:
 
