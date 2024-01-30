@@ -9,8 +9,10 @@ pip install -r requirements.txt
 
 # How to run:
 To replicate our results on the birkbeck dataset or to test the program for aspell or wikipedia datasets, you can use the main.py file. 
-The main.py file calls a function called 'findingClosestWords'
-Arguments:
+The main.py file calls a function called 'findingClosestWords'.
+
+Arguments to 'findingClosestWords':
+
 1. start_index : default = 1 
 2. end_index   : default = 5, 
 3. k_vals      : default = [1,5,10]
